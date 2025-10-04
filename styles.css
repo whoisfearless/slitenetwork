@@ -89,48 +89,63 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* 🔥 Panelek */
 .panels {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 0;
 }
 
 .panel {
-  position: relative;
-  width: 45%;
-  height: 300px;
-  background: url('mta.jpg') center/cover no-repeat;
-  filter: blur(2px) brightness(0.7);
-  border-radius: 20px;
-  overflow: hidden;
+    position: relative;
+    width: 40%;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:nth-child(1) {
+    background: url('mta.jpg') center/cover no-repeat;
 }
 
 .panel:nth-child(2) {
-  background: url('minecraft.jpg') center/cover no-repeat;
+    background: url('minecraft.jpg') center/cover no-repeat;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
+.panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
 }
 
-.overlay h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.panel .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
 }
 
-.overlay p {
-  font-size: 1.2rem;
-  max-width: 80%;
+.panel h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.panel p {
+    font-size: 1.2rem;
+}
+
+.panel:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
