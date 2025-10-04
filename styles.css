@@ -113,7 +113,7 @@ footer a:hover {
 }
 
 .panel:nth-child(2) {
-    background: url('minecraft.jpg') center/cover no-repeat;
+    background: url('https://i.imgur.com/nZhXOuT.png') center/cover no-repeat;
 }
 
 .panel::before {
