@@ -136,3 +136,54 @@ footer a:hover {
     text-align: center;
     margin-top: 10px;
 }
+
+/* Dropdown stílus */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropbtn:hover {
+    background-color: #218838;
+    border-radius: 5px;
+}
+
+/* A lenyíló tartalom alapból rejtve van */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+    border-radius: 6px;
+    top: 40px;
+}
+
+/* Lenyíló linkek */
+.dropdown-content a {
+    color: white;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #28a761;
+}
+
+/* Hoverre jelenjen meg a menü */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
