@@ -52,13 +52,6 @@ header {
     height: 30px;
 }
 
-/* Navigáció konténer javítás */
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* egyenletes távolság a gombok között */
-}
-
 /* Navigáció gombok */
 nav a {
     color: white;
@@ -143,7 +136,14 @@ footer a:hover {
     margin-top: 10px;
 }
 
-/* Dropdown stílus */
+/* Navigáció fixálása, hogy minden egy sorban legyen */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Dropdown gomb stílus */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -164,16 +164,17 @@ footer a:hover {
     border-radius: 5px;
 }
 
-/* A lenyíló tartalom alapból rejtve van */
+/* Lenyíló tartalom (alapból rejtve) */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #333;
     min-width: 180px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    z-index: 1;
     border-radius: 6px;
-    top: 40px;
+    top: 40px; /* a gomb alatt jelenjen meg */
+    left: 0;
+    z-index: 10;
 }
 
 /* Lenyíló linkek */
@@ -183,6 +184,7 @@ footer a:hover {
     text-decoration: none;
     display: block;
     transition: background 0.3s;
+    font-weight: normal;
 }
 
 .dropdown-content a:hover {
