@@ -88,3 +88,49 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.panels {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.panel {
+  position: relative;
+  width: 45%;
+  height: 300px;
+  background: url('mta.jpg') center/cover no-repeat;
+  filter: blur(2px) brightness(0.7);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.panel:nth-child(2) {
+  background: url('minecraft.jpg') center/cover no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  max-width: 80%;
+}
