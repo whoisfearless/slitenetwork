@@ -52,6 +52,12 @@ header {
     height: 30px;
 }
 
+/* Navigáció konténer javítás */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* egyenletes távolság a gombok között */
+}
 
 /* Navigáció gombok */
 nav a {
